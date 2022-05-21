@@ -5,7 +5,7 @@ import { webpackConfigDev } from '@utfprfabricadesoftware/utfpr-tools-react'
 import commonConfig from './webpack.common'
 import envLocal from '../tools/environment'
 
-const port = 4400
+const port = 4404
 
 const devConfig: Configuration = {
   ...webpackConfigDev(port),
