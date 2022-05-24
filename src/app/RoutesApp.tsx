@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, RouteProps, Redirect } from 'react-router-dom'
+import { Route, RouteProps, Redirect, Switch } from 'react-router-dom'
 import useUserStore from 'shared/utfpr-core-shared-mfe/UserStore'
 
 import { getRoutesMap } from './RoutesMap'
@@ -8,13 +8,13 @@ type RoutesAppProps = {
   basename?: string
 }
 
-const RoutesApp = ({ basename }: RoutesAppProps): JSX.Element => {
+const RoutesApp = ({ basename = '' }: RoutesAppProps): JSX.Element => {
   const findRoutes = React.useCallback(() => getRoutesMap(basename), [basename])
 
   const routes = findRoutes()
   const user = useUserStore?.()
 
-  if (!user.token) {
+  if (!user?.token) {
     return <Redirect to={user?.redirectAuth || '/login'} />
   }
 

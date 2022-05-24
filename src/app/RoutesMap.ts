@@ -12,11 +12,6 @@ export const getRoutesMap = (basename = '/solicitacoes'): RouteProps[] => {
       component: HomePageLazy,
     },
     {
-      exact: true,
-      path: `/solicitacoes/:id`,
-      component: HomePageLazy,
-    },
-    {
       path: '*',
       component: HomePageLazy,
     },
