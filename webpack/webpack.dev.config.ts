@@ -5,9 +5,15 @@ import { webpackConfigDev } from '@utfprfabricadesoftware/utfpr-tools-react'
 import commonConfig from './webpack.common'
 import envLocal from '../tools/environment'
 
+interface ConfigurationDev extends Configuration {
+  devServer: {
+    [key: string]: unknown
+  }
+}
+
 const port = 4404
 
-const devConfig: Configuration = {
+const devConfig: ConfigurationDev = {
   ...webpackConfigDev(port),
   plugins: [new EnvironmentPlugin(envLocal), new HotModuleReplacementPlugin()],
 }
