@@ -2,17 +2,17 @@ import { container } from 'webpack'
 import {
   registerApps,
   moduleFederationConfig,
-  moduleFederationSharedByReact,
+  // moduleFederationSharedByReact,
 } from '@utfprfabricadesoftware/utfpr-tools-react'
 
-import pkgs from '../package.json'
+// import pkgs from '../package.json'
 import appsEntry from '../tools/appsEntry'
 import appsExposed from '../tools/appsExposed'
 
 function moduleFederation() {
   const config = moduleFederationConfig('utfpr_approbation_mfe', {
     remotes: registerApps(appsEntry),
-    shared: moduleFederationSharedByReact(pkgs.dependencies),
+    // shared: moduleFederationSharedByReact(pkgs.dependencies),
     exposes: appsExposed,
   })
 

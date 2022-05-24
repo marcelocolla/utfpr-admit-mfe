@@ -18,9 +18,6 @@
     "isolatedModules": true,
     "jsx": "react-jsx"
   },
-  "typeRoots": [
-    "src/shared"
-  ],
   "exclude": [
     "node_modules"
   ],

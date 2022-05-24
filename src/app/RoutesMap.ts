@@ -9,16 +9,12 @@ export const getRoutesMap = (basename = '/solicitacoes'): RouteProps[] => {
   return [
     {
       exact: true,
-      path: basename,
-      component: HomePageLazy,
-    },
-    {
-      exact: true,
       path: `${basename}/:id`,
       component: DetailsPageLazy,
     },
     {
-      path: '*',
+      exact: true,
+      path: basename,
       component: HomePageLazy,
     },
   ]

@@ -11,7 +11,7 @@ interface ConfigurationDev extends Configuration {
   }
 }
 
-const port = 4404
+const port = 4500
 
 const devConfig: ConfigurationDev = {
   ...webpackConfigDev(port),
