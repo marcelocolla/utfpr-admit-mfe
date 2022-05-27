@@ -10,7 +10,7 @@ import appsEntry from '../tools/appsEntry'
 import appsExposed from '../tools/appsExposed'
 
 function moduleFederation() {
-  const config = moduleFederationConfig('utfpr_approbation_mfe', {
+  const config = moduleFederationConfig('utfpr_admit_mfe', {
     remotes: registerApps(appsEntry),
     // shared: moduleFederationSharedByReact(pkgs.dependencies),
     exposes: appsExposed,
