@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { Header } from '@utfprfabricadesoftware/utfpr-lib-ui-react'
 
-// import useUserStore from 'shared/utfpr-core-shared-mfe/UserStore'
+import useUserStore from 'shared/utfpr-core-shared-mfe/UserStore'
 import { Layout, Content } from './PageLayout.styles'
 
 type PageLayoutProps = {
@@ -13,13 +13,12 @@ type PageLayoutProps = {
 
 export const PageLayout = React.memo(({ title, home, children }: PageLayoutProps) => {
   const history = useHistory()
-  // const user = useUserStore?.()
+  const user = useUserStore?.()
 
   function handleSignOut() {
-    // user?.resetUser()
+    user?.resetUser()
 
-    // history.push(user?.redirectAuth || '/login')
-    history.push('/login')
+    history.push(user?.redirectAuth || '/login')
   }
 
   return (
