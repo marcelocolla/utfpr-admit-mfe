@@ -1,0 +1,17 @@
+Arquivo,Manutenibilidade,Ciclomatico,Sloc_logico,Sloc_fisico,Dificuldade,Esforco,Duracao,Numero_Linhas
+app/MainApp.js,90.315,1,3,21,7.273,1149.989,63.888,36
+components/ApprovalDetail/index.js,100,1,0,2,1,4.755,0.264,3
+components/ApprovalList/index.js,100,1,0,2,1,4.755,0.264,3
+components/Example/Example.js,87.096,1,3,11,6,322.647,17.925,15
+components/Example/index.js,100,1,0,4,1,12,0.667,6
+components/FormVisit/index.js,100,1,0,2,1,4.755,0.264,3
+components/FormVisitFields/FormVisitFields.js,81.44,2,3,55,7.097,2471.387,137.299,65
+components/FormVisitFields/index.js,100,1,0,2,1,4.755,0.264,3
+components/PageLayout/index.js,100,1,0,2,1,4.755,0.264,3
+components/RegisterApproval/index.js,100,1,0,2,1,4.755,0.264,3
+helpers/dateFormat.js,83.827,1,9,12,6.107,1243.172,69.065,45
+pages/Details/DetailsPage.js,72.01,3,15,34,12.973,9065.595,503.644,122
+pages/Details/index.js,100,1,0,2,1.5,23.265,1.292,6
+pages/Home/HomePage.js,100,1,2,14,5,480,26.667,24
+pages/Home/index.js,100,1,0,2,1.5,23.265,1.292,6
+services/httpClient.js,73.235,2,4,10,6.417,870.786,48.377,30
