@@ -10,7 +10,7 @@ type ApprovalDetailProps = {
 
 export const ApprovalDetail = React.memo(({ data }: ApprovalDetailProps) => {
   return (
-    <>
+    <div>
       <CardHeader>
         <div>
           <img src="/Ellipse 2.png" alt="Avatar" />
@@ -35,6 +35,6 @@ export const ApprovalDetail = React.memo(({ data }: ApprovalDetailProps) => {
           </div>
         </div>
       </DetailedCard>
-    </>
+    </div>
   )
 })
