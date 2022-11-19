@@ -29,16 +29,17 @@ export const ApprovalList = React.memo(() => {
 
   return (
     <BoxList>
-      {liberacoes?.map(({ id_liberacao, data_inicio, data_fim, Aluno }) => (
-        <Card
-          key={id_liberacao}
-          name={Aluno?.Pessoa?.nome_pessoa || '---'}
-          leftInfo={'De: ' + new Date(data_inicio).toLocaleDateString('pt-BR')}
-          rightInfo={'Até: ' + new Date(data_fim).toLocaleDateString('pt-BR')}
-          removeDisabled={true}
-          onEdition={() => history.push('/liberacoes/' + id_liberacao)}
-        />
-      ))}
+      {liberacoes &&
+        liberacoes.map((item) => (
+          <Card
+            key={item.id_liberacao}
+            name={item.Aluno?.Pessoa?.nome_pessoa || '---'}
+            leftInfo={'De: ' + new Date(item.data_inicio).toLocaleDateString('pt-BR')}
+            rightInfo={'Até: ' + new Date(item.data_fim).toLocaleDateString('pt-BR')}
+            removeDisabled={true}
+            onEdition={() => history.push('/liberacoes/' + item.id_liberacao)}
+          />
+        ))}
     </BoxList>
   )
 })

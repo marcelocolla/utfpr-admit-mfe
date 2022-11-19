@@ -8,30 +8,32 @@ type ApprovalDetailProps = {
   data: LiberacaoProps
 }
 
-export const ApprovalDetail = React.memo(({ data }: ApprovalDetailProps) => {
+export const ApprovalDetail = React.memo((props: ApprovalDetailProps) => {
+  const data = props.data || {}
+
   return (
     <div>
       <CardHeader>
         <div>
           <img src="/Ellipse 2.png" alt="Avatar" />
         </div>
-        <strong>{data?.Aluno?.Pessoa?.nome_pessoa ?? '---'}</strong>
+        <strong>{data.Aluno?.Pessoa?.nome_pessoa ?? '---'}</strong>
         <span>
-          RA: <strong>{data?.Aluno?.ra_aluno ?? '---'}</strong>
+          RA: <strong>{data.Aluno?.ra_aluno ?? '---'}</strong>
         </span>
       </CardHeader>
 
       <DetailedCard>
         <div>
           <div>Início:</div>
-          <div>{data?.data_inicio ? toLocaleString(data.data_inicio) : '---'}</div>
+          <div>{data.data_inicio ? toLocaleString(data.data_inicio) : '---'}</div>
           <div>Fim:</div>
-          <div>{data?.data_fim ? toLocaleString(data.data_fim) : '---'}</div>
+          <div>{data.data_fim ? toLocaleString(data.data_fim) : '---'}</div>
           <div />
           <div />
           <div>Professor Responsável:</div>
           <div>
-            <strong>{data?.pessoaCadastro?.nome_pessoa ?? '---'}</strong>
+            <strong>{data.pessoaCadastro?.nome_pessoa ?? '---'}</strong>
           </div>
         </div>
       </DetailedCard>

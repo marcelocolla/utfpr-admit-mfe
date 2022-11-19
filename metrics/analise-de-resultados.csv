@@ -2,9 +2,9 @@ Arquivo,Manutenibilidade,Ciclomatico,Sloc_logico,Sloc_fisico,Dificuldade,Esforco
 app/MainApp.js,90.315,1,3,17,7.273,1149.989,63.888
 app/RoutesApp.js,73.994,11,10,22,21.714,16282.88,904.604
 app/useMockApp.js,66.023,4,18,28,10.057,5077.307,282.073
-components/ApprovalDetail/ApprovalDetail.js,58.264,27,10,33,33.121,40796.552,2266.475
+components/ApprovalDetail/ApprovalDetail.js,59.323,18,10,34,25.5,24645.711,1369.206
 components/ApprovalDetail/index.js,100,1,0,2,1,4.755,0.264
-components/ApprovalList/ApprovalList.js,77.724,14,37,39,30.627,60223.954,3345.775
+components/ApprovalList/ApprovalList.js,79.017,13,34,40,28.957,56440.573,3135.587
 components/ApprovalList/index.js,100,1,0,2,1,4.755,0.264
 components/Example/Example.js,87.096,1,3,8,6,322.647,17.925
 components/Example/index.js,100,1,0,3,1,12,0.667
