@@ -3,7 +3,6 @@ import { Formik } from 'formik'
 
 import httpClient from 'services/httpClient'
 import { FormVisitFields } from 'components/FormVisitFields'
-import { dataAgora, horaAgora } from 'helpers/dateFormat'
 import { useHistory } from 'react-router-dom'
 import useUserStore from 'shared/utfpr-core-shared-mfe/UserStore'
 import { useVisit } from 'hooks/visit/useVisit'
@@ -35,24 +34,11 @@ export const FormVisit = ({ isEntrada, id_liberacao }: FormVisitProps) => {
     history.push('/visitas')
   }
 
-  const registrarSaida = async (values) => {
-    await httpClient.put('/visita', {
-      id_visita: visita?.id_visita,
-      data_saida: dataAgora(),
-      hora_saida: horaAgora(),
-      id_liberacao: values.liberacao.id_liberacao,
-      id_vigilante_saida: values.vigilante.vigilante.id_vigilante,
-      observacoes: values.observacoes,
-    })
-
-    history.go(0)
-  }
-
   return (
     <Formik
       enableReinitialize
       initialValues={{ ...visita, liberacao: liberacao, vigilante: vigilante }}
-      onSubmit={isEntrada ? registrarEntrada : registrarSaida}
+      onSubmit={registrarEntrada}
       component={(props) => <FormVisitFields {...props} isEntrada={isEntrada} />}
     />
   )
